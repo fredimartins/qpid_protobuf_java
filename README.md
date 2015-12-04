@@ -5,8 +5,11 @@ Projeto de exemplo Java para conexão em uma fila no Qpid para obter dados e des
 - AMQP 0-10 (Qpid 0.24) e Google Protobuf 2.5.0
 
 ## [Dependências] ##
+(Maven)
+
 - org.apache.qpid
 - org.apache.geronimo.specs
+- com.google.protobuf
 
 ## [Protobuf] ##
 Para gerar as classes do protobuf, baixe o arquivo 
