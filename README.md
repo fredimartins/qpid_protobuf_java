@@ -21,3 +21,31 @@ Para gerar as classes utilize o comando abaixo pelo prompt de comando na pasta p
 	protoc.exe ProtoFiles\mxt1xx.proto --java_out=java
 
 Copie a pasta gerada para a pasta source.
+
+## [Maven] ##
+Para fazer com que o Maven gere o .jar altere a versão do jdk no pom.xml para a versão disponível em seu sistema. Ex:
+
+	# javac -version
+	javac 1.7.0_91
+
+pom.xml
+
+	<source>1.7</source>
+	<target>1.7</target> 
+
+Altere também a mainclass mo pom.xml se necessário
+
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-jar-plugin</artifactId>
+		<version>2.4</version>
+		<configuration>
+		  <archive>
+			<manifest>
+			<addClasspath>true</addClasspath>
+			<mainClass>qpid_protobuf_java.Qpid</mainClass>
+			<classpathPrefix>dependency-jars/</classpathPrefix>
+			</manifest>
+		  </archive>
+		</configuration>
+	</plugin>
