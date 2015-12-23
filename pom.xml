@@ -22,7 +22,7 @@
 		  <archive>
 			<manifest>
 			<addClasspath>true</addClasspath>
-			<mainClass>qpid_protobuf_java.Qpid</mainClass>
+			<mainClass>qpid_protobuf_java.Client</mainClass>
 			<classpathPrefix>dependency-jars/</classpathPrefix>
 			</manifest>
 		  </archive>
